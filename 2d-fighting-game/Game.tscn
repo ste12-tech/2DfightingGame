@@ -219,6 +219,44 @@ texture = ExtResource("3_u44n3")
 physics_layer_0/collision_layer = 1
 sources/3 = SubResource("TileSetAtlasSource_sb48q")
 
+[sub_resource type="Animation" id="Animation_sb48q"]
+resource_name = "Move"
+length = 2.0333333
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2.01),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(114.830536, -107.01264), Vector2(208.83795, -107.01264), Vector2(118.15831, -107.01264)]
+}
+
+[sub_resource type="Animation" id="Animation_t88pq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(114.830536, -107.01264)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r0x5m"]
+_data = {
+&"Move": SubResource("Animation_sb48q"),
+&"RESET": SubResource("Animation_t88pq")
+}
+
 [node name="Game2D" type="Node2D" unique_id=479142981]
 scale = Vector2(0.3639185, 0.36452797)
 
@@ -262,4 +300,6 @@ position = Vector2(128.50084, -60.366104)
 [node name="MovingPlatform" parent="." unique_id=80833352 instance=ExtResource("4_sb48q")]
 position = Vector2(114.830536, -107.01264)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatform" unique_id=379639330]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatform" unique_id=2112168714]
+libraries/ = SubResource("AnimationLibrary_r0x5m")
+autoplay = &"Move"
