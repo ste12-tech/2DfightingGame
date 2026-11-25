@@ -220,7 +220,7 @@ physics_layer_0/collision_layer = 1
 sources/3 = SubResource("TileSetAtlasSource_sb48q")
 
 [node name="Game2D" type="Node2D" unique_id=479142981]
-scale = Vector2(0.36575636, 0.36444294)
+scale = Vector2(0.3639185, 0.36452797)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1665399815]
 stream = ExtResource("1_wbfu4")
@@ -237,7 +237,7 @@ scale = Vector2(0.13377778, 0.11922479)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2123625382]
 position = Vector2(-104.65115, -3158.8271)
-scale = Vector2(38.206993, 6.493648)
+scale = Vector2(37.911842, 6.590952)
 shape = SubResource("WorldBoundaryShape2D_1ig2n")
 
 [node name="TileMap" type="TileMap" parent="." unique_id=1655297268]
@@ -253,11 +253,13 @@ tile_set = SubResource("TileSet_1ig2n")
 use_parent_material = true
 tile_set = SubResource("TileSet_1ig2n")
 
-[node name="AnimatableBody2D" parent="." unique_id=1336257238 instance=ExtResource("4_sb48q")]
+[node name="Platform" parent="." unique_id=1336257238 instance=ExtResource("4_sb48q")]
 position = Vector2(87.48993, -21.951311)
 
-[node name="AnimatableBody2D2" parent="." unique_id=777171189 instance=ExtResource("4_sb48q")]
+[node name="Platform2" parent="." unique_id=777171189 instance=ExtResource("4_sb48q")]
 position = Vector2(128.50084, -60.366104)
 
-[node name="AnimatableBody2D3" parent="." unique_id=80833352 instance=ExtResource("4_sb48q")]
+[node name="MovingPlatform" parent="." unique_id=80833352 instance=ExtResource("4_sb48q")]
 position = Vector2(114.830536, -107.01264)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatform" unique_id=379639330]

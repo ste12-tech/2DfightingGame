@@ -178,6 +178,7 @@ radius = 235.0
 height = 932.0
 
 [node name="Player" type="Node2D" unique_id=310246453]
+z_index = 100
 scale = Vector2(0.13377778, 0.11922479)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=121087517]
