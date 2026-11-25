@@ -225,6 +225,7 @@ scale = Vector2(0.36575636, 0.36444294)
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1665399815]
 stream = ExtResource("1_wbfu4")
 autoplay = true
+parameters/looping = true
 
 [node name="Player" parent="." unique_id=310246453 instance=ExtResource("2_xkndl")]
 position = Vector2(-8.202182, 16.463482)
