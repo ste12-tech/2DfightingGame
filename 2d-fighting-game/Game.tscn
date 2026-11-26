@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dkylwnmn33h0r" path="res://player.tscn" id="2_xkndl"]
 [ext_resource type="Texture2D" uid="uid://cmr5sda00bfyl" path="res://Assets/Sprite/world_tileset.png" id="3_u44n3"]
 [ext_resource type="PackedScene" uid="uid://dggpr3c038kpm" path="res://Platform.tscn" id="4_sb48q"]
+[ext_resource type="PackedScene" uid="uid://pquvcrl5wxje" path="res://coin.tscn" id="5_t88pq"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1ig2n"]
 distance = -269.35733
@@ -267,7 +268,7 @@ parameters/looping = true
 
 [node name="Player" parent="." unique_id=310246453 instance=ExtResource("2_xkndl")]
 position = Vector2(-8.202182, 16.463482)
-scale = Vector2(0.029624216, 0.027509293)
+scale = Vector2(0.057894666, 0.055782612)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1323415230]
 position = Vector2(13.670301, 408.84317)
@@ -291,15 +292,41 @@ tile_set = SubResource("TileSet_1ig2n")
 use_parent_material = true
 tile_set = SubResource("TileSet_1ig2n")
 
-[node name="Platform" parent="." unique_id=1336257238 instance=ExtResource("4_sb48q")]
-position = Vector2(87.48993, -21.951311)
-
-[node name="Platform2" parent="." unique_id=777171189 instance=ExtResource("4_sb48q")]
-position = Vector2(128.50084, -60.366104)
-
 [node name="MovingPlatform" parent="." unique_id=80833352 instance=ExtResource("4_sb48q")]
 position = Vector2(114.830536, -107.01264)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatform" unique_id=2112168714]
 libraries/ = SubResource("AnimationLibrary_r0x5m")
 autoplay = &"Move"
+
+[node name="CoinsCollection" type="Node" parent="." unique_id=1395526124]
+
+[node name="Coin" parent="CoinsCollection" unique_id=416948730 instance=ExtResource("5_t88pq")]
+position = Vector2(8, -50)
+scale = Vector2(0.3639185, 0.36452797)
+
+[node name="Coin2" parent="CoinsCollection" unique_id=742762312 instance=ExtResource("5_t88pq")]
+position = Vector2(-32.000004, -44)
+scale = Vector2(0.3639185, 0.36452797)
+
+[node name="Coin3" parent="CoinsCollection" unique_id=1688300280 instance=ExtResource("5_t88pq")]
+position = Vector2(-96, -20)
+scale = Vector2(0.3639185, 0.36452797)
+
+[node name="Coin4" parent="CoinsCollection" unique_id=240794148 instance=ExtResource("5_t88pq")]
+position = Vector2(-60.999996, -38)
+scale = Vector2(0.3639185, 0.36452797)
+
+[node name="Coin5" parent="CoinsCollection" unique_id=645525819 instance=ExtResource("5_t88pq")]
+position = Vector2(61, -8)
+scale = Vector2(0.3639185, 0.36452797)
+
+[node name="Platforms" type="Node" parent="." unique_id=1014644091]
+
+[node name="Platform" parent="Platforms" unique_id=1336257238 instance=ExtResource("4_sb48q")]
+position = Vector2(31.839205, -8.001867)
+scale = Vector2(0.3639185, 0.36452797)
+
+[node name="Platform2" parent="Platforms" unique_id=777171189 instance=ExtResource("4_sb48q")]
+position = Vector2(46.763836, -22.005133)
+scale = Vector2(0.3639185, 0.36452797)

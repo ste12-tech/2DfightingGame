@@ -94,10 +94,15 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_1ig2n"]
+radius = 5.0
+
 [node name="Area2D" type="Area2D" unique_id=416948730]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=697186948]
 sprite_frames = SubResource("SpriteFrames_1ig2n")
 animation = &"CoinSpin"
-frame = 6
-frame_progress = 0.9799943
+autoplay = "CoinSpin"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=206548347]
+shape = SubResource("CircleShape2D_1ig2n")
